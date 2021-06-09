@@ -25,9 +25,6 @@ translate :: [(Float,Float)] -> [(Float,Float)]
 translate [] = []
 translate ((x,y):xs) = (x + 2, y + 2) : translate xs
 
-countShorts :: [String] -> Int
-countShorts strl = length [str | str <- strl, length str < 5]
-
 countLongs :: [String] -> Int
 countLongs [] = 0
 countLongs (x:xs) = if length x > 5
